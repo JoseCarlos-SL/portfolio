@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: #E6DDBC;
+    color: #F5F5F5;
     text-decoration: none;
 }
 
@@ -12,33 +12,43 @@ body{
 }
 
 header{
-    background-color: rgb(211, 44, 44);
+    background-color: #0B0B0B;
     height: 100px;
     width: 100%;
     display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
+    justify-content: center;
 }
 
+
 nav{
-    height: 100%;
+    width: 80%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 nav ul{
     display: flex;
-    flex-direction: row;
-    gap: 20px;
+    gap: 30px;
+    list-style: none;
 }
 
 nav ul a{
-    gap: 30px;
+    font-family: 'Inter', sans-serif;
+    font-size: larger;
+}
+
+.logo img{
+    width: 270px;
+}
+
+.social{
+    display: flex;
+    gap: 20px;
 }
 
 .link_icon img{
-    width: 100px;
+    width: 70px;
 }
 
 /*.principal{
