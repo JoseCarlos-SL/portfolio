@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: #F5F5F5;
+    font-family: 'Inter', sans-serif;
     text-decoration: none;
 }
 
@@ -13,15 +13,20 @@ body{
 
 header{
     background-color: #0B0B0B;
-    height: 100px;
+    min-height: 80px;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    padding: 10px 0;
 }
 
+header a{
+    color: #F5F5F5;
+}
 
 nav{
-    width: 80%;
+    width: 95%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -29,17 +34,17 @@ nav{
 
 nav ul{
     display: flex;
-    gap: 30px;
+    gap: 40px;
     list-style: none;
 }
 
 nav ul a{
-    font-family: 'Inter', sans-serif;
+    
     font-size: larger;
 }
 
 .logo img{
-    width: 270px;
+    width: 90px;
 }
 
 .social{
@@ -51,24 +56,51 @@ nav ul a{
     width: 70px;
 }
 
-/*.principal{
+h2{font-size: 50px;}
+
+#formacao{
+    text-align: center;
+    margin: 20px 0;
+}
+.coluna-tecnologias{
+    margin-top: 20px;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 50px;
+    width: 100%;
     align-items: center;
-    justify-content: space-around;
-    background-color: blue;
-    margin: 4%;
+    justify-content: center;
 }
 
-.box1{
-    background-color: aqua;
-    width: 60%;
-    height: 500px;
-}
-
-.box2{
-    background-color: rgb(6, 231, 63);
-    width: 30%;
-    height: 400px;
+.card{
+    width: 300px;
+    height: 450px;
+    background-color: #161B22;
+    border-radius: 10px;
+    padding: 30px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #F5F5F5;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
-    */
+
+.card:hover{
+    transform: scale(1.05);
+    transition: 0.5s ;
+}
+
+.card h3{
+    font-size: xx-large;
+}
+/* .container{
+
+display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 20px;
+
+} */
