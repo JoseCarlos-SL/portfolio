@@ -4,15 +4,47 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
     text-decoration: none;
+    color: var(--textb-color);
+}
+
+/* *, *::before, *::after {
+  transition:
+    background-color 0.5s ease-in-out 0.3s,
+    color 0.5s ease-in-out 0.3s,
+    border-color 0.5s ease-in-out 0.3s,
+    box-shadow 0.5s ease-in-out 0.3s;
+} */
+
+:root {
+  --bg-color: #ffffff;
+  --bg2-color: #1a1a1a;
+  --textb-color: #ffffff;
+  --textp-color: #000000;
+  --box-shadow-color: 0 10px 20px rgba(0, 0, 0, 0.3);
+
+  --bgc-color: #161B22;
+
+}
+
+/* mudança ao apertar o botão do dark mode */
+:root.dark-mode {
+
+  --bg-color: #1a1a1a;
+  --bg2-color: #ffffff;
+  --textb-color:rgb(0, 0, 0)0;
+  --textp-color: #ffffff;
+  --box-shadow-color: none;
+
+  --bgc-color: #ffffff
 }
 
 body{
-    background-color: #ffffff;
+    background-color: var(--bg-color);
     height: 100vh;
 }
 
 header{
-    background-color: #0B0B0B;
+    background-color: #1a1a1a;
     min-height: 80px;
     width: 100%;
     display: flex;
@@ -56,14 +88,88 @@ nav ul a{
     width: 70px;
 }
 
-h2{font-size: 50px;}
+h2{
+    font-size: 50px;
+    color: var(--textp-color);
+}
 
+
+/* ---------------------PROJETOS--------------------- */
+#projetos{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.box-geral{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-weight: 600;
+}
+
+.box-left{
+    height: 500px;
+    width: 30%;
+    border-radius: 20px 0 0 20px;
+    box-shadow: var(--box-shadow-color) ;
+}
+.box-right{
+    
+    background-position: center;
+    height: 500px;
+    width: 30%;
+    border-radius: 0 30px 30px 0;
+    box-shadow: var(--box-shadow-color) ;
+}
+
+#calculadora .box-right{
+    background-image: url(img/print-calculadora.png);
+}
+
+#calculadora .box-left{
+    background-color: var(--bg2-color);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px;
+    color: #221616;
+}
+
+#calculadora a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: var(--bg-color);
+    height: 80px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#calculadora a p{
+    color: var(--textp-color);
+}
+
+#calculadora a:hover{
+    background-color: #0B0B0B;
+    color: aqua;
+}
+
+
+
+/* ---------------------FORMAÇÃO--------------------- */
 #formacao{
     text-align: center;
     margin: 20px 0;
 }
 .coluna-tecnologias{
     margin-top: 20px;
+    padding: 0 0 100px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -76,15 +182,14 @@ h2{font-size: 50px;}
 .card{
     width: 300px;
     height: 450px;
-    background-color: #161B22;
+    background-color: var(--bgc-color);
     border-radius: 10px;
     padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: #F5F5F5;
     text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--box-shadow-color);
 }
 
 .card:hover{
@@ -92,7 +197,7 @@ h2{font-size: 50px;}
     transition: 0.5s ;
 }
 
-.card h3{
+h3{
     font-size: xx-large;
 }
 /* .container{
