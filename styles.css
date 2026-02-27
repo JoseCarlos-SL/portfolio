@@ -16,8 +16,10 @@
 } */
 
 :root {
+  --h2-color: #1a1a1a;
   --bg-color: #ffffff;
   --bg2-color: #1a1a1a;
+  --bghover-color:#E1B12C;
   --textb-color: #ffffff;
   --textp-color: #000000;
   --box-shadow-color: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -28,9 +30,10 @@
 
 /* mudança ao apertar o botão do dark mode */
 :root.dark-mode {
-
+  --h2-color:#ffffff;
   --bg-color: #1a1a1a;
   --bg2-color: #ffffff;
+  --bghover-color:#44BD32;
   --textb-color:rgb(0, 0, 0)0;
   --textp-color: #ffffff;
   --box-shadow-color: none;
@@ -40,7 +43,6 @@
 
 body{
     background-color: var(--bg-color);
-    height: 100vh;
 }
 
 header{
@@ -50,7 +52,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 10px 0;
+   
 }
 
 header a{
@@ -62,6 +64,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 nav ul{
@@ -76,8 +79,11 @@ nav ul a{
 }
 
 .logo img{
-    width: 90px;
+    max-width: 80px;
+    height: auto;
 }
+
+.btn-theme { margin-top: 10px; /* dá espaço quando empilhado */ }
 
 .social{
     display: flex;
@@ -90,7 +96,7 @@ nav ul a{
 
 h2{
     font-size: 50px;
-    color: var(--textp-color);
+    color: var(--h2-color);
 }
 
 
@@ -109,38 +115,7 @@ h2{
     font-weight: 600;
 }
 
-.box-left{
-    height: 500px;
-    width: 30%;
-    border-radius: 20px 0 0 20px;
-    box-shadow: var(--box-shadow-color) ;
-}
-.box-right{
-    
-    background-position: center;
-    height: 500px;
-    width: 30%;
-    border-radius: 0 30px 30px 0;
-    box-shadow: var(--box-shadow-color) ;
-}
-
-#calculadora .box-right{
-    background-image: url(img/print-calculadora.png);
-}
-
-#calculadora .box-left{
-    background-color: var(--bg2-color);
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    padding: 50px;
-    color: #221616;
-}
-
-#calculadora a{
+.box-geral a{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -151,15 +126,51 @@ h2{
     border-radius: 10px;
 }
 
-#calculadora a p{
+.box-geral a p{
     color: var(--textp-color);
 }
 
+
 #calculadora a:hover{
-    background-color: #0B0B0B;
-    color: aqua;
+    background-color: var(--bghover-color);
+    transform: scale(1.05);
+    transition: 0.2s ;
+    font-size: 110%;
 }
 
+.box-left{
+    height: 500px;
+    min-height: 250px;
+    width: 30%;
+    min-width: 300px;
+    border-radius: 30px 0 0 30px;
+    box-shadow: var(--box-shadow-color) ;
+    background-color: var(--bg2-color);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px;
+    color: #221616;
+}
+.box-right{
+    
+    background-position: center;
+    height: 500px;
+    min-height: 250px;
+    width: 30%;
+    min-width: 300px;
+    border-radius: 0 30px 30px 0;
+    box-shadow: var(--box-shadow-color) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#calculadora .box-right{
+    background-image: url(img/print-calculadora.png);   
+}
 
 
 /* ---------------------FORMAÇÃO--------------------- */
@@ -209,3 +220,23 @@ grid-template-columns: repeat(3, 1fr);
 gap: 20px;
 
 } */
+
+@media (max-width: 480px){
+    .box-geral{
+        flex-direction: column;
+        height: 600px;
+    }
+    .box-left{
+        border-radius: 30px 30px 0 0;
+    }
+    .box-right{
+        border-radius: 0 0 30px 30px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    header{
+        height: 100px;
+    }
+}
