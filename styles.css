@@ -46,57 +46,56 @@ body {
   background-color: var(--bg-color);
 }
 
-header {
-  min-height: 90px;
+/* ---------------------HEADER--------------------- */
+.logo{
+  font-size: 30px;
+  letter-spacing: 3px;
+  color: white;
+}
+
+.logo span{
+  color: #44BD32;
+}
+
+.nav-list{
+  height: 8vh;
   width: 100%;
-}
-
-header a {
-  color: #f5f5f5;
-}
-
-/* HAMBURGER */
-/* .hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
-}
-
-.hamburger span {
-  width: 30px;
-  height: 3px;
-  background: white;
-  transition: 0.3s;
-} */
-
-header nav {
   z-index: 2;
-  padding: 0 20%;
-  background-color: #1a1a1a;
+  padding: 0 10%;
+  top: 0;
   position: fixed;
-  width: 100%;
+  background-color: #1a1a1a;
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-header nav ul {
+.nav-list ul {
   display: flex;
   gap: 40px;
   list-style: none;
 }
 
-header nav ul a {
+.nav-list ul a {
+  letter-spacing: 3px;
   font-size: larger;
+  color: #f5f5f5;
 }
 
-.logo img {
-  max-width: 80px;
-  height: auto;
+
+
+.social {
+  display: flex;
+  gap: 20px;
 }
 
+.link_icon img {
+  width: 50px;
+}
+
+/* ---------------------DARKMODE--------------------- */
 .botao-tema {
   position: fixed;
   top: 12%;
@@ -115,28 +114,25 @@ header nav ul a {
   transform: scale(1.2);
 }
 
-.social {
-  display: flex;
-  gap: 20px;
-}
-
-.link_icon img {
-  width: 50px;
-}
-
-h2 {
-  font-size: 50px;
-  color: var(--h2-color);
+/* ---------------------MAIN--------------------- */
+main{
+  margin-top: 8vh;
 }
 
 /* ---------------------PROJETOS--------------------- */
 #projetos {
   text-align: center;
-  margin-top: 50px;
+  padding: 6vh 0 0 0;
+}
+
+h2 {
+  font-size: 50px;
+  color: var(--h2-color);
+  letter-spacing: 2px;
 }
 
 .box-geral {
-  margin-top: 80px;
+  padding: 6vh 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -167,9 +163,9 @@ h2 {
 }
 
 .box-left {
-  height: 500px;
+  height: 550px;
   min-height: 250px;
-  width: 30%;
+  width: 35%;
   min-width: 300px;
   border-radius: 30px 0 0 30px;
   box-shadow: var(--box-shadow-color);
@@ -185,9 +181,9 @@ h2 {
 }
 .box-right {
   background-position: center;
-  height: 500px;
+  height: 550px;
   min-height: 250px;
-  width: 30%;
+  width: 35%;
   min-width: 300px;
   border-radius: 0 30px 30px 0;
   box-shadow: var(--box-shadow-color);
@@ -202,10 +198,10 @@ h2 {
 /* ---------------------FORMAÇÃO--------------------- */
 #formacao {
   text-align: center;
-  margin: 20px 0;
+ 
 }
 .coluna-tecnologias {
-  margin-top: 20px;
+  margin-top: 6vh;
   padding: 0 0 100px;
   display: flex;
   flex-wrap: wrap;
