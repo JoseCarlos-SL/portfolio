@@ -25,8 +25,7 @@
   --textp-color: #000000;
   --box-shadow-color: 0 10px 20px rgba(0, 0, 0, 0.3);
   --bgc-color: #161b22;
-
-  --dark-img: url(dark-mode.svg);
+  --card-github: invert(0);
 }
 
 /* mudança ao apertar o botão do dark mode */
@@ -39,7 +38,7 @@
   --textp-color: #ffffff;
   --box-shadow-color: none;
   --bgc-color: #ffffff;
-  --dark-img: url(light.svg);
+  --card-github: invert(0.9);
 }
 
 body {
@@ -82,6 +81,10 @@ body {
   letter-spacing: 3px;
   font-size: larger;
   color: #f5f5f5;
+}
+
+.nav-list ul a:hover{
+  color: #44bd32;
 }
 
 
@@ -223,6 +226,10 @@ h2 {
   justify-content: space-between;
   text-align: center;
   box-shadow: var(--box-shadow-color);
+}
+
+ .card-github{
+  filter: var(--card-github);
 }
 
 .card:hover {
