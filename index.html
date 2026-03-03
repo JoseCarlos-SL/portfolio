@@ -11,9 +11,14 @@
 
 <body>
     <header>
-        <nav class="nav-list">
+        <nav>
             <a class="logo" href="log"><span>dev.</span>José Carlos</a>
-            <ul>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
                 <li><a href="">SOBRE MIM</a></li>
                 <li><a href="">PROJETOS</a></li>
                 <li><a href="">FORMAÇÃO</a></li>
@@ -49,7 +54,7 @@
                 <div class="box-right"></div>
             </article>
 
-            <article id="calculadora" class="box-geral">
+            <!-- <article id="calculadora" class="box-geral">
                 <div class="box-left">
                     <h3>FITZ</h3>
                     <p>Uma ferramenta prática construída com as tecnologias essenciais da web: estrutura em HTML,
@@ -59,7 +64,7 @@
                     </a>
                 </div>
                 <div class="box-right"></div>
-            </article>
+            </article> -->
 
         </section>
 
@@ -92,6 +97,15 @@
                     <h3 class="tech-nome">JavaScript</h3>
                     <p class="tech-descricao">
                         Linguagem de programação que cria interatividade.
+                    </p>
+
+                </article>
+
+                <article class="card">
+                    <img class="card-github" src="img/github.svg" alt="">
+                    <h3 class="tech-nome">GITHUB</h3>
+                    <p class="tech-descricao">
+                        Plataforma para hospedagem e versionamento de código.
                     </p>
 
                 </article>
@@ -129,7 +143,7 @@
         </nav>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>

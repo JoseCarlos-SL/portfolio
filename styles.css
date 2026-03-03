@@ -25,8 +25,7 @@
   --textp-color: #000000;
   --box-shadow-color: 0 10px 20px rgba(0, 0, 0, 0.3);
   --bgc-color: #161b22;
-
-  --dark-img: url(dark-mode.svg);
+  --card-github: invert(0);
 }
 
 /* mudança ao apertar o botão do dark mode */
@@ -39,7 +38,7 @@
   --textp-color: #ffffff;
   --box-shadow-color: none;
   --bgc-color: #ffffff;
-  --dark-img: url(light.svg);
+  --card-github: invert(0.9);
 }
 
 body {
@@ -47,51 +46,62 @@ body {
 }
 
 /* ---------------------HEADER--------------------- */
-.logo{
+header nav{
+  top: 0;
+  height: 8vh;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #1a1a1a;
+}
+
+header .logo{
   font-size: 30px;
   letter-spacing: 3px;
   color: white;
 }
 
-.logo span{
+header .logo span{
   color: #44BD32;
 }
 
-.nav-list{
-  height: 8vh;
-  width: 100%;
-  z-index: 2;
-  padding: 0 10%;
-  top: 0;
-  position: fixed;
-  background-color: #1a1a1a;
-  
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.nav-list ul {
+header .nav-list {
   display: flex;
   gap: 40px;
   list-style: none;
 }
 
-.nav-list ul a {
+header .nav-list ul a {
   letter-spacing: 3px;
   font-size: larger;
   color: #f5f5f5;
 }
 
+header .nav-list ul a:hover{
+  color: #44bd32;
+}
 
+header .mobile-menu{
+  display: none;
+  cursor: pointer;
+}
 
-.social {
+header .mobile-menu div{
+  width: 32px;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 8px;
+}
+
+header .social {
   display: flex;
   gap: 20px;
 }
 
-.link_icon img {
+header .link_icon img {
   width: 50px;
 }
 
@@ -225,6 +235,10 @@ h2 {
   box-shadow: var(--box-shadow-color);
 }
 
+ .card-github{
+  filter: var(--card-github);
+}
+
 .card:hover {
   transform: scale(1.05);
   transition: 0.5s;
@@ -264,6 +278,43 @@ footer a{
 
 footer img{
   width: 30px;
+}
+
+@media (max-width:1024px){
+  body{
+    overflow-x: hidden;
+  }
+
+  .social img{
+    display: none;
+  }
+
+  .nav-list{
+    position: fixed;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background: #1a1a1a;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+  }
+
+  header .mobile-menu{
+    display: block;
+    position: absolute;
+    right: 10%;
+  }
+}
+
+.nav-list.active{
+  transform: translateX(0);
 }
 
 /* @media (max-width: 480px) {
