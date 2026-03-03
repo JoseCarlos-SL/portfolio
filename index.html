@@ -9,15 +9,17 @@
 </head>
 
 <body>
+    
     <header>
-
         <nav>
             <div class="logo">
                 <img src="img/logo.png" alt="">
             </div>
-            <button id="toggle-dark" class="btn-theme">
-                Alternar Modo Noturno
-            </button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul>
                 <li><a href="">SOBRE MIM</a></li>
                 <li><a href="">PROJETOS</a></li>
@@ -25,17 +27,15 @@
                 <li><a href="">CONTATOS</a></li>
             </ul>
             <div class="social">
-                <a href="" class="link_icon" target="_blank"><img src="img/github.svg" alt=""></a>
+                <a href="https://github.com/JoseCarlos-SL" class="link_icon" target="_blank"><img src="img/github.svg" alt=""></a>
                 <a href="" class="link_icon" target="_blank"><img src="img/linkedin.svg" alt=""></a>
             </div>
-
         </nav>
-
     </header>
-
-
-
     <main class="principal">
+        <button id="toggle-dark" class="botao-tema">
+                <img src="img/dark-mode.svg" alt="">
+            </button>
         <section id="sobremim">
 
         </section>
@@ -111,6 +111,28 @@
         </section>
     </main>
     </div>
+
+    <footer>
+        <nav aria-label="Redes sociais">
+            <ul>
+                <li>
+                    <a href="https://github.com/JoseCarlos-SL" target="_blank" rel="noopener noreferrer">
+                        GITHUB <img src="img/github.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com/in/seuusuario" target="_blank" rel="noopener noreferrer">
+                        LINKEDIN <img src="img/linkedin.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wa.me/11985174779" target="_blank" rel="noopener noreferrer">
+                        WHATSAPP <img src="img/whatsapp.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
 
     <script src="script.js"></script>
 </body>
