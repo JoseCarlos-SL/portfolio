@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; 
   font-family: "Inter", sans-serif;
   text-decoration: none;
   color: var(--textb-color);
@@ -46,8 +46,10 @@ body {
 }
 
 /* ---------------------HEADER--------------------- */
+
 header nav{
   top: 0;
+  left: 0;
   height: 8vh;
   width: 100%;
   position: fixed;
@@ -56,6 +58,7 @@ header nav{
   align-items: center;
   justify-content: space-evenly;
   background-color: #1a1a1a;
+  z-index: 2;
 }
 
 header .logo{
@@ -80,11 +83,16 @@ header .nav-list ul a {
   color: #f5f5f5;
 }
 
+header a{
+  color: rgb(255, 255, 255);
+}
+
 header .nav-list ul a:hover{
   color: #44bd32;
 }
 
 header .mobile-menu{
+  visibility: hidden;
   display: none;
   cursor: pointer;
 }
@@ -180,7 +188,6 @@ h2 {
   border-radius: 30px 0 0 30px;
   box-shadow: var(--box-shadow-color);
   background-color: var(--bg2-color);
-  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -283,7 +290,9 @@ footer img{
 @media (max-width:1024px){
   body{
     overflow-x: hidden;
+    width: 100%;
   }
+  
 
   .social img{
     display: none;
@@ -299,6 +308,7 @@ footer img{
     flex-direction: column;
     align-items: center;
     transform: translateX(100%);
+    
     transition: transform 0.5s ease-in;
   }
 
@@ -307,6 +317,7 @@ footer img{
   }
 
   header .mobile-menu{
+    visibility: visible;
     display: block;
     position: absolute;
     right: 10%;
@@ -317,7 +328,11 @@ footer img{
   transform: translateX(0);
 }
 
-/* @media (max-width: 480px) {
+ @media (max-width: 480px) {
+
+  header .logo{
+    font-size: 20px;
+  }
 
   .link_icon{
     display: none;
@@ -337,29 +352,10 @@ footer img{
   .card{
     transform: scale(0.9);
   }
-
-  nav ul {
-    z-index: 2;
-    position: absolute;
-    top: 100%;
-    right: -20%;
-    background: #1a1a1a;
-    flex-direction: column;
-    width: 220px;
-    padding: 20px;
-    transform: translateX(100%);
-    transition: transform 0.4s ease;
-  }
-
-  nav ul.active {
-    transform: translateX(0);
-  }
-
-  .hamburger {
-    display: flex;
-  }
 }
 
+
+/*
 @media (max-width: 768px) {
 }
 
