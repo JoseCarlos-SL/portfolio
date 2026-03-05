@@ -47,9 +47,8 @@ const mobileNavBar = new MobileNavBar(
 
 mobileNavBar .init();
 
-const text = `Este é um texto grande que vai sendo escrito aos poucos.
-Ele quebra linha automaticamente dependendo do tamanho da tela.
-Isso funciona perfeitamente em celulares e desktops.`;
+const text = `Estudante de ciência da computação buscando me tornar desenvolverdor, com conhecimentos básicos em linguagens
+ como HTML, CSS, JS, Java, Python e SQL, versionamento de código usando GIT/GITHUB. `;
 
 const element = document.getElementById("typing");
 
