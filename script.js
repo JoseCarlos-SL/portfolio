@@ -63,3 +63,28 @@ function typeWriter() {
 }
 
 typeWriter();
+
+// let text;
+
+// if (window.matchMedia("(max-width: 768px)").matches) {
+//   // Texto para mobile
+//   text = `Estudante de ciência da computação
+// buscando me tornar desenvolvedor.`;
+// } else {
+//   // Texto para desktop
+//   text = `Estudante de ciência da computação buscando me tornar desenvolvedor, com conhecimentos básicos em linguagens como HTML, CSS, JS, Java, Python e SQL, versionamento de código usando GIT/GITHUB.`;
+// }
+
+// const element = document.getElementById("typing");
+
+// let i = 0;
+
+// function typeWriter() {
+//   if (i < text.length) {
+//     element.innerHTML += text.charAt(i);
+//     i++;
+//     setTimeout(typeWriter, 30);
+//   }
+// }
+
+// typeWriter();
