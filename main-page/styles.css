@@ -6,6 +6,12 @@
   text-decoration: none;
   color: var(--textb-color);
   list-style: none;
+  scroll-margin-top: 50px;
+}
+
+html {
+  scroll-behavior: smooth;
+  
 }
 
 /* *, *::before, *::after {
@@ -136,7 +142,62 @@ header .link_icon img {
 main{
   margin-top: 8vh;
 }
+/* ---------------------SOBREMIM--------------------- */
+#sobremim{
+  text-align: center;
+  padding: 6vh 0 0 0;
+  height: 92vh;
+}
 
+.sobre{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 100%;
+}
+
+.boxtextosobremim{
+  padding: 0 0 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+  width: 50%;
+  height: 100%;
+  
+}
+
+.boxtextosobremim h4{
+  font-size: 50px;
+  color: var(--textp-color);
+  font-family: monospace;
+}
+
+/* cursor só na linha ativa */
+#typing {
+  color: var(--textp-color);
+  font-family: monospace;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.cursor {
+  border-right: 2px solid;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.boximagemsobremim{
+  background-color: rgb(255, 255, 255);
+  width: 50%;
+  height: 100%;
+}
 /* ---------------------PROJETOS--------------------- */
 #projetos {
   text-align: center;
@@ -329,6 +390,10 @@ footer img{
 }
 
  @media (max-width: 480px) {
+
+  .botao-tema{
+    size-adjust: 1.9;
+  }
 
   header .logo{
     font-size: 20px;
