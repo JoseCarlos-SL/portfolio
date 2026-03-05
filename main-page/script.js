@@ -46,3 +46,20 @@ const mobileNavBar = new MobileNavBar(
 );
 
 mobileNavBar .init();
+
+const text = `Estudante de ciência da computação buscando me tornar desenvolverdor, com conhecimentos básicos em linguagens
+ como HTML, CSS, JS, Java, Python e SQL, versionamento de código usando GIT/GITHUB. `;
+
+const element = document.getElementById("typing");
+
+let i = 0;
+
+function typeWriter() {
+  if (i < text.length) {
+    element.innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, 30);
+  }
+}
+
+typeWriter();
