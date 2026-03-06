@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   font-family: "Inter", sans-serif;
   text-decoration: none;
   color: var(--textb-color);
@@ -11,7 +11,6 @@
 
 html {
   scroll-behavior: smooth;
-  
 }
 
 /* *, *::before, *::after {
@@ -51,9 +50,13 @@ body {
   background-color: var(--bg-color);
 }
 
+#formacao {
+  scroll-margin-top: 100px;
+}
+
 /* ---------------------HEADER--------------------- */
 
-header nav{
+header nav {
   top: 0;
   left: 0;
   height: 8vh;
@@ -67,14 +70,14 @@ header nav{
   z-index: 2;
 }
 
-header .logo{
+header .logo {
   font-size: 30px;
   letter-spacing: 3px;
   color: white;
 }
 
-header .logo span{
-  color: #44BD32;
+header .logo span {
+  color: #44bd32;
 }
 
 header .nav-list {
@@ -89,21 +92,21 @@ header .nav-list ul a {
   color: #f5f5f5;
 }
 
-header a{
+header a {
   color: rgb(255, 255, 255);
 }
 
-header .nav-list ul a:hover{
+header .nav-list ul a:hover {
   color: #44bd32;
 }
 
-header .mobile-menu{
+header .mobile-menu {
   visibility: hidden;
   display: none;
   cursor: pointer;
 }
 
-header .mobile-menu div{
+header .mobile-menu div {
   width: 32px;
   height: 2px;
   background-color: #ffffff;
@@ -122,14 +125,14 @@ header .link_icon img {
 /* ---------------------DARKMODE--------------------- */
 .botao-tema {
   position: fixed;
-  top: 12%;
-  left: 2%;
+  top: 0.5%;
+  left: 1%;
+  z-index: 3;
   background-color: transparent;
   border: none;
 }
 
 .botao-tema img {
-  
   height: 60px;
   filter: invert(0.1);
 }
@@ -139,17 +142,17 @@ header .link_icon img {
 }
 
 /* ---------------------MAIN--------------------- */
-main{
+main {
   margin-top: 8vh;
 }
 /* ---------------------SOBREMIM--------------------- */
-#sobremim{
+#sobremim {
   text-align: center;
   padding: 6vh 0 0 0;
   height: 92vh;
 }
 
-.sobre{
+.sobre {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,18 +160,17 @@ main{
   width: 100%;
 }
 
-.boxtextosobremim{
-  padding: 0 0 0 30px;
+.boxtextosobremim {
+  padding: 0 0 0 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: start;
   width: 50%;
   height: 100%;
-  
 }
 
-.boxtextosobremim h4{
+.boxtextosobremim h4 {
   font-size: 50px;
   color: var(--textp-color);
   font-family: monospace;
@@ -194,10 +196,19 @@ main{
   }
 }
 
-.boximagemsobremim{
-  background-color: rgb(255, 255, 255);
+.boximagemsobremim {
   width: 50%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boximagemsobremim .imagemsobremim {
+  background-image: url(img/imagem-garoto-programando.png);
+  background-size: cover;
+  width: 500px;
+  height: 500px;
 }
 /* ---------------------PROJETOS--------------------- */
 #projetos {
@@ -277,7 +288,6 @@ h2 {
 /* ---------------------FORMAÇÃO--------------------- */
 #formacao {
   text-align: center;
- 
 }
 .coluna-tecnologias {
   margin-top: 6vh;
@@ -304,7 +314,7 @@ h2 {
   box-shadow: var(--box-shadow-color);
 }
 
- .card-github{
+.card-github {
   filter: var(--card-github);
 }
 
@@ -317,26 +327,25 @@ h3 {
   font-size: xx-large;
 }
 
-footer{
- background-color: #1a1a1a;
+footer {
+  background-color: #1a1a1a;
 }
 
-footer nav{
+footer nav {
   height: 200px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
-footer nav ul{
+footer nav ul {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-footer a{
+footer a {
   height: 30px;
   display: flex;
   gap: 10px;
@@ -345,24 +354,31 @@ footer a{
   justify-content: center;
 }
 
-footer img{
+footer img {
   width: 30px;
 }
 
 /* ---------------------QUERIES--------------------- */
 
-@media (max-width:1024px){
-  body{
+@media (min-width: 1024px) {
+  .box-left p{
+    line-height: 2;
+  }
+
+  
+}
+
+@media (max-width: 1024px) {
+  body {
     overflow-x: hidden;
     width: 100%;
   }
-  
 
-  .social img{
+  .social img {
     display: none;
   }
 
-  .nav-list{
+  .nav-list {
     position: fixed;
     top: 8vh;
     right: 0;
@@ -372,7 +388,7 @@ footer img{
     flex-direction: column;
     align-items: center;
     transform: translateX(100%);
-    
+
     transition: transform 0.5s ease-in;
   }
 
@@ -380,60 +396,137 @@ footer img{
     margin-left: 0;
   }
 
-  header .mobile-menu{
+  header .mobile-menu {
     visibility: visible;
     display: block;
     position: absolute;
     right: 10%;
   }
 
-  .boxtextosobremim{
-    width: 100%;
-    padding: 20px;
+  .boxtextosobremim {
+    width: 90%;
+    padding: 50px;
   }
-
-  .boximagemsobremim{
-    display: none;
-  }
-
-  
 }
 
-.nav-list.active{
+.nav-list.active {
   transform: translateX(0);
 }
 
- @media (max-width: 480px) {
-
-  .botao-tema{
-    size-adjust: 1.9;
+@media (max-width: 480px) {
+  /* ---------------------DARKMODE--------------------- */
+  .botao-tema {
+    top: 1%;
+    left: 2%;
   }
 
-  header .logo{
+  .botao-tema img {
+    height: 50px;
+  }
+
+  .botao-tema:hover {
+  transform: scale(1);
+}
+  /* ---------------------DARKMODE--------------------- */
+  /* ---------------------HEADER--------------------- */
+  header .logo {
     font-size: 20px;
   }
 
-  .link_icon{
+  .link_icon {
     display: none;
   }
+  /* ---------------------HEADER--------------------- */
+  /* ---------------------MAIN--------------------- */
+  main {
+    margin-top: 3vh;
+  }
+  /* ---------------------MAIN--------------------- */
+  /* ---------------------SOBREMIM--------------------- */
+  #sobremim {
+    height: 100%;
+  }
 
+  .sobre {
+    height: 650px;
+    padding: 0 30px 0 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .boxtextosobremim {
+    padding: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    width: 100%;
+    height: 400px;
+  }
+
+  .boxtextosobremim h4 {
+    font-size: 40px;
+    line-height: 1;
+    color: var(--textp-color);
+    font-family: monospace;
+  }
+
+  #typing {
+  white-space: pre-line;
+  color: var(--textp-color);
+  font-family: monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+  .boximagemsobremim {
+    width: 100%;
+    height: 250px;
+  }
+
+  .boximagemsobremim .imagemsobremim {
+    width: 250px;
+    height: 250px;
+  }
+  /* ---------------------SOBREMIM--------------------- */
+  /* ---------------------PROJETOS--------------------- */
   .box-geral {
     flex-direction: column;
     height: 700px;
   }
   .box-left {
     border-radius: 30px 30px 0 0;
-
+    padding: 20px 30px 20px 30px;
+    gap: 20px;
   }
+  .box-left a {
+    height: 50px;
+  }
+
   .box-right {
     border-radius: 0 0 30px 30px;
   }
+  /* ---------------------PROJETOS--------------------- */
 
-  .card{
-    transform: scale(0.9);
+  h2 {
+    font-size: 40px;
   }
-}
+  /* ---------------------FORMAÇÃO--------------------- */
+  .coluna-tecnologias {
+    gap: 30px;
+    width: 100%;
+  }
 
+  .card {
+    height: 300px;
+    width: 150px;
+    background-color: var(--bg2-color);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  /* ---------------------FORMAÇÃO--------------------- */
+}
 
 /*
 @media (max-width: 768px) {
