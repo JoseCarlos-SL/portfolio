@@ -285,6 +285,10 @@ h2 {
   background-image: url(img/print-calculadora.png);
 }
 
+#kapilavra .box-right {
+  background-image: url(img/kapilavraImagem.png);
+}
+
 /* ---------------------FORMAÇÃO--------------------- */
 #formacao {
   text-align: center;
@@ -404,14 +408,25 @@ footer img {
   }
 
   .boxtextosobremim {
+    height: 100px;
     width: 90%;
     padding: 50px;
+  }
+   .boximagemsobremim {
+    width: 100%;
+    height: 250px;
+  }
+
+  .boximagemsobremim .imagemsobremim {
+    width: 250px;
+    height: 250px;
   }
 }
 
 .nav-list.active {
   transform: translateX(0);
 }
+
 
 @media (max-width: 480px) {
   /* ---------------------DARKMODE--------------------- */
