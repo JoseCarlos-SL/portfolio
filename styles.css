@@ -285,6 +285,10 @@ h2 {
   background-image: url(img/print-calculadora.png);
 }
 
+#kapilavra .box-right {
+  background-image: url(img/kapilavraImagem.png);
+}
+
 /* ---------------------FORMAÇÃO--------------------- */
 #formacao {
   text-align: center;
